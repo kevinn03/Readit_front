@@ -1,4 +1,26 @@
 .Header {
   margin: 0 1%;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px black solid;
+}
+.header-item {
+  /* margin: 1%; */
+}
+
+.header-left {
+  border: 2px black solid;
+  max-width: 10%;
+  text-align: center;
+}
+.header-title {
+  font-family: 'Beau Rivage', cursive;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 4em;
+  font-weight: 400;
+}
+.header-title__front {
+  color: rgb(19, 59, 134);
+}
+.header-right {
 }

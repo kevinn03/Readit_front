@@ -10,15 +10,17 @@ html {
   margin: 0 auto;
   box-sizing: border-box;
   width: 80%;
-  /* font-family: Larish Neue, serif; */
+  font-family: 'Larish Neue', serif;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .border-box {
   box-sizing: border-box;
 }
 
-div {
+/* div {
   border: 1px green solid;
-}
+} */
 .dis-flex {
   display: flex;
 }
