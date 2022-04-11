@@ -3,7 +3,7 @@ export interface PostInter {
   commentLink: string;
   url: string;
   date: string;
-  image?: string;
+  image: string;
   score: number;
   comments: number;
 }

@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const addPosts = async () => {
       const tempPost: PostInter[] = [];
-      const result = await redditAPI.getPosts('personalfinancecanada');
+      const result = await redditAPI.getPosts('nba');
       tempPost.push(...result);
       setPosts(tempPost);
     };

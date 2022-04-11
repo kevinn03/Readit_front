@@ -6,7 +6,7 @@ interface IProps {
   posts: PostInter[];
 }
 const PostLeft = ({ posts }: IProps) => {
-  const example = posts[0];
+  const example = posts[2];
   return (
     <div className="dis-flex PostLeft w-100">
       <PostItem post={example}></PostItem>

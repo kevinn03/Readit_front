@@ -3,8 +3,17 @@
   /* width: 100%; */
   margin: 1% 1%;
 }
+.post-item__title {
+  margin: 1.5% 0;
+}
+
+.post-item__image {
+  max-width: 350px;
+  width: 90%;
+  max-height: 150px;
+}
 a {
-  font-size: 160%;
+  font-size: 150%;
   text-transform: capitalize;
   text-decoration: none;
   color: black;
