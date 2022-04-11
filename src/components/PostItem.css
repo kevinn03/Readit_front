@@ -1,0 +1,16 @@
+.post-item {
+  text-align: center;
+  /* width: 100%; */
+  margin: 1% 1%;
+}
+a {
+  font-size: 160%;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+  padding: 0%;
+}
+
+a:hover {
+  text-decoration: underline;
+}

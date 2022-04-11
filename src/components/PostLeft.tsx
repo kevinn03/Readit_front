@@ -1,9 +1,15 @@
 import React from 'react';
 import './PostLeft.css';
-const PostLeft = () => {
+import PostItem from './PostItem';
+import { PostInter } from '../types';
+interface IProps {
+  posts: PostInter[];
+}
+const PostLeft = ({ posts }: IProps) => {
+  const example = posts[0];
   return (
     <div className="dis-flex PostLeft w-100">
-      <div>Content</div>
+      <PostItem post={example}></PostItem>
     </div>
   );
 };

@@ -4,26 +4,27 @@
   align-items: center;
   border-bottom: 1px black solid;
 }
-.header-item {
-  /* margin: 1%; */
-}
-
 .header-left {
+  width: 25%;
+}
+.header-left__item {
   border: 2px black solid;
-  max-width: 10%;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 120%;
 }
 .header-title {
   font-family: 'Beau Rivage', cursive;
   font-family: 'Lavishly Yours', cursive;
-  font-size: 4em;
+  font-size: 375%;
   font-weight: 400;
+  text-align: center;
+  width: 100%;
 }
 .header-title__front {
   color: rgb(19, 59, 134);
 }
 .header-right {
   text-align: right;
-  font-size: 1.2em;
+  font-size: 120%;
+  width: 25%;
 }
