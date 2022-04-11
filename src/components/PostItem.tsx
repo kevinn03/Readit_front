@@ -28,7 +28,18 @@ const PostItem = ({ post }: IProps) => {
         </a>
       </div>
       <div className="post-item__stat">
-        <span className="post-item__data">{date.toLocaleString()} </span>
+        <span className="post-item__data">
+          {date.toLocaleString()} |{' '}
+          <a
+            className="comment"
+            href={post?.commentLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Comments ({post?.comments})
+          </a>{' '}
+          | Score: {post?.score}
+        </span>
       </div>
     </div>
   );

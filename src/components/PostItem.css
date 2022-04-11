@@ -1,23 +1,27 @@
 .post-item {
   text-align: center;
-  /* width: 100%; */
   margin: 1% 1%;
 }
 .post-item__title {
   margin: 1.5% 0;
 }
 
-.post-item__image {
-  max-width: 350px;
-  width: 90%;
-  max-height: 150px;
-}
-a {
-  font-size: 150%;
+.post-item__title a {
+  font-size: 140%;
   text-transform: capitalize;
   text-decoration: none;
   color: black;
   padding: 0%;
+}
+
+.post-item__image {
+  max-width: 350px;
+  width: 90%;
+  max-height: 170px;
+}
+
+.post-item__data {
+  font-size: 80%;
 }
 
 a:hover {
