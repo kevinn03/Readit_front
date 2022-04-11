@@ -9,8 +9,8 @@ interface IProps {
 const Main = ({ posts }: IProps) => {
   return (
     <div className="Main h-100 border-box">
-      <Post posts={posts}></Post>
-      <Post posts={posts}></Post>
+      <Post title={'Global'} posts={posts}></Post>
+      <Post title={'Test'} posts={posts}></Post>
     </div>
   );
 };

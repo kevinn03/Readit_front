@@ -1,6 +1,10 @@
 .Post {
   justify-content: space-evenly;
+  margin: 0.5% 0;
 }
 
 .post-title {
+  font-size: 150%;
+  color: white;
+  background-color: black;
 }

@@ -5,12 +5,13 @@ import PostRight from './PostRight';
 import { PostInter } from '../types';
 interface IProps {
   posts: PostInter[];
+  title: string;
 }
-const Post = ({ posts }: IProps) => {
+const Post = ({ posts, title }: IProps) => {
   return (
-    <div>
-      <div>
-        <span className="post-title">Hello</span>
+    <div className="post-container">
+      <div className="post-title">
+        <span>{title}</span>
       </div>
       <div className="Post dis-flex">
         <PostLeft posts={posts}></PostLeft>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './SubHeader.css';
-import { Navbar, Container, Nav, NavDropdown, Form } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 const SubHeader = () => {
   return (
     <div className="Subheader">
-      <Navbar className="subheader-nav" bg="light" expand="md">
-        <Container>
+      <Navbar className="subheader-nav" bg="dark" expand="xl" variant="dark">
+        <Container fluid>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
