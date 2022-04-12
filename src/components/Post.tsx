@@ -6,12 +6,13 @@ import { PostInter } from '../types';
 interface IProps {
   posts: PostInter[];
   title: string;
+  idName: string;
 }
-const Post = ({ posts, title }: IProps) => {
+const Post = ({ posts, title, idName }: IProps) => {
   const revPosts = [...posts];
   revPosts.sort((a, b) => (a.score < b.score ? 1 : -1));
   return (
-    <div className="post-container">
+    <div className="post-container" id={idName}>
       <div className="post-title__container">
         <span className="post-title">{title}</span>
       </div>

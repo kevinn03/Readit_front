@@ -106,12 +106,24 @@ const Main = () => {
   }, []);
   return (
     <div className="Main h-100 border-box">
-      <Post title={'World News'} posts={worldPosts}></Post>
-      <Post title={'CDN News'} posts={localPosts}></Post>
-      <Post title={'Sports'} posts={sportPosts}></Post>
-      <Post title={'Politics'} posts={politcPosts}></Post>
-      <Post title={'Real Estate'} posts={realPosts}></Post>
-      <Post title={'Entertainment'} posts={enterPosts}></Post>
+      <Post
+        idName={'world-news'}
+        title={'World News'}
+        posts={worldPosts}
+      ></Post>
+      <Post idName={'cdn-news'} title={'CDN News'} posts={localPosts}></Post>
+      <Post idName={'sports'} title={'Sports'} posts={sportPosts}></Post>
+      <Post idName={'politics'} title={'Politics'} posts={politcPosts}></Post>
+      <Post
+        idName={'real-estate'}
+        title={'Real Estate'}
+        posts={realPosts}
+      ></Post>
+      <Post
+        idName={'entertainment'}
+        title={'Entertainment'}
+        posts={enterPosts}
+      ></Post>
       {/* <Post title={'Technology'} posts={posts}></Post> */}
     </div>
   );

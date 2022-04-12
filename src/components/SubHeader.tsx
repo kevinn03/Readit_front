@@ -16,7 +16,7 @@ const SubHeader = () => {
               <Nav.Link href="#politics">Politics</Nav.Link>
               <Nav.Link href="#real-estate">Real Estate</Nav.Link>
               <Nav.Link href="#entertainment">Entertainment</Nav.Link>
-              <Nav.Link href="#about">
+              <Nav.Link href="">
                 <span className="about">About</span>
               </Nav.Link>
             </Nav>

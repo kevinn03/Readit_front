@@ -26,7 +26,7 @@ const Header = () => {
   ];
   const date = new Date();
   return (
-    <div className="dis-flex Header">
+    <div className="dis-flex Header" id="home">
       <div className="header-left">
         <div className="header-left__item">News Scraped From Reddit</div>
       </div>
