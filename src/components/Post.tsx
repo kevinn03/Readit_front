@@ -8,14 +8,16 @@ interface IProps {
   title: string;
 }
 const Post = ({ posts, title }: IProps) => {
+  const revPosts = [...posts];
+  revPosts.sort((a, b) => (a.score < b.score ? 1 : -1));
   return (
     <div className="post-container">
       <div className="post-title__container">
         <span className="post-title">{title}</span>
       </div>
       <div className="Post dis-flex">
-        <PostLeft post={posts[0]}></PostLeft>
-        <PostRight posts={posts.slice(1)}></PostRight>
+        <PostLeft post={revPosts[0]}></PostLeft>
+        <PostRight posts={revPosts.slice(1)}></PostRight>
       </div>
     </div>
   );
