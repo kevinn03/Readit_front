@@ -2,6 +2,11 @@ import React from 'react';
 import './SubHeader.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 const SubHeader = () => {
+  const displayAbout = (): void => {
+    const aboutEle = document.querySelector('#about');
+    aboutEle?.classList.toggle('d-none');
+  };
+
   return (
     <div className="Subheader">
       <Navbar className="subheader-nav" bg="light" expand="md" variant="light">
@@ -17,7 +22,9 @@ const SubHeader = () => {
               <Nav.Link href="#real-estate">Real Estate</Nav.Link>
               <Nav.Link href="#entertainment">Entertainment</Nav.Link>
               <Nav.Link href="">
-                <span className="about">About</span>
+                <span className="about" onClick={displayAbout}>
+                  About
+                </span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
