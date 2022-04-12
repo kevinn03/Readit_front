@@ -6,6 +6,7 @@ import { PostInter } from '../types';
 
 const Main = () => {
   const [sportPosts, setSportPosts] = useState<PostInter[]>([]);
+  const [worldPosts, setWorldPosts] = useState<PostInter[]>([]);
 
   useEffect(() => {
     const addSportPosts = async () => {
@@ -23,15 +24,28 @@ const Main = () => {
       console.log(tempPost.sort((a, z) => (a.score < z.score ? 1 : -1)));
       setSportPosts(tempPost);
     };
-
+    const addWorldPosts = async () => {
+      const subreddit = [
+        { r: 'news', index: 0 },
+        { r: 'worldnews', index: 1 },
+        { r: 'worldevents', index: 0 },
+      ];
+      const tempPost: PostInter[] = [];
+      for (const sub of subreddit) {
+        const result = await redditAPI.getPosts(sub.r, sub.index);
+        tempPost.push(...result);
+      }
+      console.log(tempPost.sort((a, z) => (a.score < z.score ? 1 : -1)));
+      setWorldPosts(tempPost);
+    };
     addSportPosts();
+    addWorldPosts();
   }, []);
   return (
     <div className="Main h-100 border-box">
-      {/* <Post title={'World News'} posts={posts}></Post> */}
+      <Post title={'World News'} posts={worldPosts}></Post>
       {/* <Post title={'CDN News'} posts={posts}></Post> */}
       {/* <Post title={'Entertainment'} posts={posts}></Post> */}
-      <Post title={'Sports'} posts={sportPosts}></Post>
       <Post title={'Sports'} posts={sportPosts}></Post>
       {/* <Post title={'Politics'} posts={posts}></Post> */}
       {/* <Post title={'Business'} posts={posts}></Post> */}
