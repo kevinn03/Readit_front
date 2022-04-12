@@ -37,3 +37,9 @@ html {
 .d-none {
   display: none;
 }
+
+.sticky-top {
+  position: fixed;
+  top: 0;
+  width: 80%;
+}
