@@ -10,9 +10,15 @@ const SubHeader = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">World News</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <Nav.Link href="#link">Yo</Nav.Link>
+              <Nav.Link href="#world-news">World News</Nav.Link>
+              <Nav.Link href="#cdn-news">CDN News</Nav.Link>
+              <Nav.Link href="#sports">Sports</Nav.Link>
+              <Nav.Link href="#politics">Politics</Nav.Link>
+              <Nav.Link href="#real-estate">Real Estate</Nav.Link>
+              <Nav.Link href="#entertainment">Entertainment</Nav.Link>
+              <Nav.Link href="#about">
+                <span className="about">About</span>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

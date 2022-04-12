@@ -10,6 +10,7 @@ const Main = () => {
   const [localPosts, setLocalPosts] = useState<PostInter[]>([]);
   const [enterPosts, setEnterPosts] = useState<PostInter[]>([]);
   const [politcPosts, setPoliticPosts] = useState<PostInter[]>([]);
+  const [realPosts, setRealPosts] = useState<PostInter[]>([]);
 
   useEffect(() => {
     const addSportPosts = async () => {
@@ -58,6 +59,7 @@ const Main = () => {
     const addEnterPosts = async () => {
       const subreddit = [
         { r: 'entertainment', index: 0 },
+        { r: 'movies', index: 1 },
         { r: 'celebrities', index: 0 },
       ];
       const tempPost: PostInter[] = [];
@@ -82,20 +84,34 @@ const Main = () => {
       setPoliticPosts(tempPost);
     };
 
+    const addRealPosts = async () => {
+      const subreddit = [
+        { r: 'canadahousing', index: 2 },
+        { r: 'torontorealestate', index: 1 },
+      ];
+      const tempPost: PostInter[] = [];
+      for (const sub of subreddit) {
+        const result = await redditAPI.getPosts(sub.r, sub.index);
+        tempPost.push(...result);
+      }
+      setRealPosts(tempPost);
+    };
+
     addSportPosts();
     addWorldPosts();
     addLocalPosts();
     addEnterPosts();
     addPoliticPosts();
+    addRealPosts();
   }, []);
   return (
     <div className="Main h-100 border-box">
       <Post title={'World News'} posts={worldPosts}></Post>
       <Post title={'CDN News'} posts={localPosts}></Post>
       <Post title={'Sports'} posts={sportPosts}></Post>
-      <Post title={'Entertainment'} posts={enterPosts}></Post>
       <Post title={'Politics'} posts={politcPosts}></Post>
-      {/* <Post title={'Business'} posts={posts}></Post> */}
+      <Post title={'Real Estate'} posts={realPosts}></Post>
+      <Post title={'Entertainment'} posts={enterPosts}></Post>
       {/* <Post title={'Technology'} posts={posts}></Post> */}
     </div>
   );
