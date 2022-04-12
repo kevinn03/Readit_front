@@ -8,6 +8,7 @@ const Main = () => {
   const [sportPosts, setSportPosts] = useState<PostInter[]>([]);
   const [worldPosts, setWorldPosts] = useState<PostInter[]>([]);
   const [localPosts, setLocalPosts] = useState<PostInter[]>([]);
+  const [enterPosts, setEnterPosts] = useState<PostInter[]>([]);
 
   useEffect(() => {
     const addSportPosts = async () => {
@@ -22,7 +23,6 @@ const Main = () => {
         const result = await redditAPI.getPosts(sub.r, sub.index);
         tempPost.push(...result);
       }
-      console.log(tempPost.sort((a, z) => (a.score < z.score ? 1 : -1)));
       setSportPosts(tempPost);
     };
 
@@ -37,7 +37,6 @@ const Main = () => {
         const result = await redditAPI.getPosts(sub.r, sub.index);
         tempPost.push(...result);
       }
-      console.log(tempPost.sort((a, z) => (a.score < z.score ? 1 : -1)));
       setWorldPosts(tempPost);
     };
 
@@ -52,20 +51,32 @@ const Main = () => {
         const result = await redditAPI.getPosts(sub.r, sub.index);
         tempPost.push(...result);
       }
-      console.log(tempPost.sort((a, z) => (a.score < z.score ? 1 : -1)));
       setLocalPosts(tempPost);
+    };
+    const addEnterPosts = async () => {
+      const subreddit = [
+        { r: 'entertainment', index: 0 },
+        { r: 'celebrities', index: 0 },
+      ];
+      const tempPost: PostInter[] = [];
+      for (const sub of subreddit) {
+        const result = await redditAPI.getPosts(sub.r, sub.index);
+        tempPost.push(...result);
+      }
+      setEnterPosts(tempPost);
     };
 
     addSportPosts();
     addWorldPosts();
     addLocalPosts();
+    addEnterPosts();
   }, []);
   return (
     <div className="Main h-100 border-box">
       <Post title={'World News'} posts={worldPosts}></Post>
       <Post title={'CDN News'} posts={localPosts}></Post>
-      {/* <Post title={'Entertainment'} posts={posts}></Post> */}
       <Post title={'Sports'} posts={sportPosts}></Post>
+      <Post title={'Entertainment'} posts={enterPosts}></Post>
       {/* <Post title={'Politics'} posts={posts}></Post> */}
       {/* <Post title={'Business'} posts={posts}></Post> */}
       {/* <Post title={'Technology'} posts={posts}></Post> */}
