@@ -1,0 +1,25 @@
+.post-item-minor {
+  text-align: center;
+  margin: 0.5% 1%;
+}
+.post-item-minor__title {
+  margin: 1.5% 0;
+}
+
+.post-item-minor__title a {
+  color: black;
+  font-weight: 200;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 0%;
+}
+
+.post-item-minor__data {
+  font-size: 80%;
+  color: grey;
+}
+
+a:hover {
+  text-decoration: underline;
+}

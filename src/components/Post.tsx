@@ -14,8 +14,8 @@ const Post = ({ posts, title }: IProps) => {
         <span className="post-title">{title}</span>
       </div>
       <div className="Post dis-flex">
-        <PostLeft posts={posts}></PostLeft>
-        <PostRight></PostRight>
+        <PostLeft post={posts[0]}></PostLeft>
+        <PostRight posts={posts.slice(1)}></PostRight>
       </div>
     </div>
   );

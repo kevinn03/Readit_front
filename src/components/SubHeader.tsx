@@ -6,11 +6,11 @@ const SubHeader = () => {
     <div className="Subheader">
       <Navbar className="subheader-nav" bg="light" expand="xl" variant="light">
         <Container fluid>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Top</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#home">World News</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
               <Nav.Link href="#link">Yo</Nav.Link>
             </Nav>

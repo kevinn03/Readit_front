@@ -1,11 +1,16 @@
 import React from 'react';
 import './PostRight.css';
-const PostRight = () => {
+import PostItemMinor from './PostItemMinor';
+import { PostInter } from '../types';
+interface IProps {
+  posts: PostInter[];
+}
+const PostRight = ({ posts }: IProps) => {
   return (
     <div className="dis-flex PostRight w-100">
-      <div>Content</div>
-      <div>Content</div>
-      <div>Content</div>
+      {posts.map((post) => {
+        return <PostItemMinor key={post.title} post={post}></PostItemMinor>;
+      })}
     </div>
   );
 };

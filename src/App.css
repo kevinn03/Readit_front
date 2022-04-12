@@ -19,9 +19,9 @@ html {
   box-sizing: border-box;
 }
 
-div {
+/* div {
   border: 1px green solid;
-}
+} */
 .dis-flex {
   display: flex;
 }
