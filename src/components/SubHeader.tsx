@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 const SubHeader = () => {
   return (
     <div className="Subheader">
-      <Navbar className="subheader-nav" bg="light" expand="xl" variant="light">
+      <Navbar className="subheader-nav" bg="light" expand="md" variant="light">
         <Container fluid>
           <Navbar.Brand href="#home">Top</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

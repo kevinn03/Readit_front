@@ -32,6 +32,7 @@ const Main = () => {
       {/* <Post title={'CDN News'} posts={posts}></Post> */}
       {/* <Post title={'Entertainment'} posts={posts}></Post> */}
       <Post title={'Sports'} posts={sportPosts}></Post>
+      <Post title={'Sports'} posts={sportPosts}></Post>
       {/* <Post title={'Politics'} posts={posts}></Post> */}
       {/* <Post title={'Business'} posts={posts}></Post> */}
       {/* <Post title={'Technology'} posts={posts}></Post> */}
