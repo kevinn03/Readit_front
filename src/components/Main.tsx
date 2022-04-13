@@ -17,7 +17,7 @@ const Main = () => {
       const subreddit = [
         { r: 'nba', index: 2 },
         { r: 'nfl', index: 2 },
-        { r: 'nhl', index: 2 },
+        { r: 'sports', index: 0 },
         { r: 'baseball', index: 2 },
       ];
       const tempPost: PostInter[] = [];

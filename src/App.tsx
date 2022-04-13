@@ -4,6 +4,7 @@ import Main from './components/Main';
 import Header from './components/Header';
 import SubHeader from './components/SubHeader';
 import About from './components/About';
+import Footer from './components/Footer';
 function App() {
   document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
@@ -21,6 +22,7 @@ function App() {
       <SubHeader></SubHeader>
       <About></About>
       <Main></Main>
+      <Footer></Footer>
     </div>
   );
 }

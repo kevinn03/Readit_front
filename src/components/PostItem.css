@@ -24,6 +24,6 @@
   font-size: 80%;
 }
 
-a:hover {
+.post-item __stat a:hover {
   text-decoration: underline;
 }
