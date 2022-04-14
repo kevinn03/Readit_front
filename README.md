@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# ReadIt News Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Explore [ReadIt News](https://readit-news.herokuapp.com/)
 
-## Available Scripts
+ReadIt News is a news website that aggregates news content from Reddit
 
-In the project directory, you can run:
+ReadIt News backend can be found [here](https://github.com/kevinn03/Readit_back)
 
-### `npm start`
+## Instructions
+* clone this repository
+* run ```npm install``` inside root directory and frontend directory
+* run the seed file
+* run ```npm start``` in root directory
+* navigate to ```localhost:3000``` in your browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="800" alt="ReadIt News picture" src="https://i.imgur.com/Arx4WoG.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Technologies
+### Frontend
+* TypeScript
+* React.js
+* Bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Backend
+* TypeScript
+* Express.js
+* Node.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Api providing endpoints that allow for:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Getting subreddit posts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Endpoint Documentation
 
-### `npm run eject`
+### GET /api/reddit/{subreddit}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Returns a list of posts from that subreddit.
+* Optional query parameter index allows for extraction of reddit posts starting at that index
+* Default index is 0
+* Ex /api/reddit/nba?index=2
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Successful Response:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```JSON
+[
+{
+title: "[George Karl] Maybe the Nuggets should hire @MarkJackson13 for the next couple weeks. He can then get Iguodala to share some intel on the Warriors. 🐀😆",
+commentLink: "https://www.reddit.com/r/nba/comments/u3ihh1/george_karl_maybe_the_nuggets_should_hire/",
+url: "https://www.reddit.com/r/nba/comments/u3ihh1/george_karl_maybe_the_nuggets_should_hire/",
+date: 1649945598,
+image: "https://external-preview.redd.it/hfQoS-Z7QbAMphGV3pE9R0DfPyf9KvawNKQnEIagQ5o.jpg?auto=webp&s=2d082ba7f6ffbf69309291460aece968c10d53dc",
+score: 1039,
+comments: 388
+},
+{
+title: "Pascal Siakam reacts to Nick Nurse saying the Sixers vs Raptors series will be a "slug fest".",
+commentLink: "https://www.reddit.com/r/nba/comments/u3d9we/pascal_siakam_reacts_to_nick_nurse_saying_the/",
+url: "https://streamable.com/2cdv74",
+date: 1649928155,
+image: "https://external-preview.redd.it/Oq8TlyRyD4F0RhAzCTSTI8-xu19fVH9MOIgmI9Wb8Mw.jpg?auto=webp&s=75c5f67a586e990f25d304305519e21b290627f4",
+score: 1968,
+comments: 235
+}
+]
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### This to do
+* Add testing
+* Add live date
