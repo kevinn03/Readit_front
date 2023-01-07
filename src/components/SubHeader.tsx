@@ -17,6 +17,7 @@ const SubHeader = () => {
             <Nav className="me-auto">
               <Nav.Link href="#world-news">World News</Nav.Link>
               <Nav.Link href="#cdn-news">CDN News</Nav.Link>
+              <Nav.Link href="#popular">Popular</Nav.Link>
               <Nav.Link href="#sports">Sports</Nav.Link>
               <Nav.Link href="#politics">Politics</Nav.Link>
               <Nav.Link href="#real-estate">Real Estate</Nav.Link>
