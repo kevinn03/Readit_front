@@ -10,11 +10,28 @@ html {
   padding: 0;
   margin: 1% auto;
   box-sizing: border-box;
-  width: 80%;
   font-family: 'Heebo', sans-serif;
   font-size: 1rem;
   /* font-weight: 800; */
   scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .App {
+    width: 80%;
+  }
 }
 .border-box {
   box-sizing: border-box;

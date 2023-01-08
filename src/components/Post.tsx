@@ -12,7 +12,7 @@ const Post = ({ posts, title, idName }: IProps) => {
   const revPosts = [...posts];
   revPosts.sort((a, b) => (a.score < b.score ? 1 : -1));
   return (
-    <div className="post-container" id={idName}>
+    <div className="post__container" id={idName}>
       <div className="post-title__container">
         <span className="post-title">{title}</span>
       </div>
