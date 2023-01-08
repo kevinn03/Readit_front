@@ -52,6 +52,12 @@ html {
   .sticky-top {
     width: 98%;
   }
+  .post-item {
+    text-align: left;
+  }
+  .post-item-minor {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 600px) {

@@ -1,9 +1,7 @@
 .post-item-minor {
   text-align: center;
-  margin: 1% 1%;
-}
-.post-item-minor__title {
-  margin: 1.5% 0;
+  margin: 2% 1%;
+  width: 100%;
 }
 
 .post-item-minor__title a {
@@ -22,4 +20,10 @@
 
 a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-item-minor {
+    text-align: left;
+  }
 }

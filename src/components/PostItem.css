@@ -1,13 +1,11 @@
 .post-item {
   text-align: center;
   margin: 1% 1%;
-}
-.post-item__title {
-  margin: 1.5% 0;
+  width: 100%;
 }
 
 .post-item__title a {
-  font-size: 140%;
+  font-size: 130%;
   text-transform: capitalize;
   text-decoration: none;
   color: black;
@@ -18,12 +16,19 @@
   max-width: 350px;
   width: 90%;
   max-height: 150px;
+  margin-bottom: 1.5%;
 }
 
 .post-item__data {
   font-size: 80%;
 }
 
-.post-item __stat a:hover {
+.post-item__stat a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-item {
+    text-align: left;
+  }
 }
