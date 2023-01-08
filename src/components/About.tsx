@@ -12,7 +12,7 @@ const About = () => {
           </a>
         </span>
         ReadIt News was created, to provide an alternative source to
-        tradiational Canadian news outlets, for Torontonians.
+        tradiational Canadian news outlets, for Canadians.
       </p>
       <p>
         Reddit is a great source for news as it provides fairly uncensored

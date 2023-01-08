@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <div className="dis-flex Header" id="home">
       <div className="header-left">
-        <div className="header-left__item">News Scraped From Reddit</div>
+        <div className="header-left__item">News Data From Reddit</div>
       </div>
       <div className="header-title">
         <span className="header-title__front">ReadIt</span> News
