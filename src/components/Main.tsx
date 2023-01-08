@@ -14,6 +14,97 @@ const Main = () => {
   const [popularPosts, setPopularPosts] = useState<PostInter[]>([]);
 
   useEffect(() => {
+    //trade off between speed and dry code
+
+    // const categories = {
+    //   sports: [
+    //     { r: 'nba', index: 2 },
+    //     { r: 'nfl', index: 2 },
+    //     { r: 'sports', index: 0 },
+    //     { r: 'baseball', index: 2 },
+    //   ],
+
+    //   world: [
+    //     { r: 'news', index: 0 },
+    //     { r: 'worldnews', index: 1 },
+    //     { r: 'worldevents', index: 0 },
+    //   ],
+
+    //   local: [
+    //     { r: 'canadanews', index: 0 },
+    //     { r: 'ontario', index: 1 },
+    //     { r: 'toronto', index: 2 },
+    //   ],
+
+    //   entertainment: [
+    //     { r: 'entertainment', index: 0 },
+    //     { r: 'movies', index: 1 },
+    //     { r: 'celebrities', index: 0 },
+    //   ],
+
+    //   politics: [
+    //     { r: 'politics', index: 1 },
+    //     { r: 'neutralpolitics', index: 1 },
+    //     { r: 'canadianpolitics', index: 0 },
+    //   ],
+    //   realEstate: [
+    //     { r: 'canadahousing', index: 2, end: 5 },
+    //     { r: 'torontorealestate', index: 1, end: 4 },
+    //   ],
+
+    //   popular: [{ r: 'popular', index: 0, end: 6 }],
+    // };
+
+    // const addPosts = async (categories: { [x: string]: any }) => {
+    //   for (const [key, val] of Object.entries(categories)) {
+    //     let postFunction = setSportPosts;
+
+    //     switch (key) {
+    //       case 'sports':
+    //         postFunction = setSportPosts;
+    //         break;
+    //       case 'world':
+    //         postFunction = setWorldPosts;
+    //         break;
+    //       case 'local':
+    //         postFunction = setLocalPosts;
+    //         break;
+    //       case 'entertainment':
+    //         postFunction = setEnterPosts;
+    //         break;
+    //       case 'politics':
+    //         postFunction = setPoliticPosts;
+    //         break;
+    //       case 'realEstate':
+    //         postFunction = setRealPosts;
+    //         break;
+    //       case 'popular':
+    //         postFunction = setPopularPosts;
+    //         break;
+    //     }
+    //     const tempPost: PostInter[] = [];
+    //     for (const subReddit of val) {
+    //       const result = await redditAPI.getPosts(
+    //         subReddit.r,
+    //         subReddit.index,
+    //         subReddit.end
+    //       );
+    //       tempPost.push(...result);
+    //     }
+    //     postFunction(tempPost);
+    //   }
+    // };
+
+    const getPosts = async (subreddits: any) => {
+      const posts: PostInter[] = [];
+      for (const sub of subreddits) {
+        const result = await redditAPI.getPosts(sub.r, sub.index, sub.end);
+        posts.push(...result);
+      }
+
+      return posts;
+    };
+
     const addSportPosts = async () => {
       const subreddit = [
         { r: 'nba', index: 2 },
@@ -21,12 +112,8 @@ const Main = () => {
         { r: 'sports', index: 0 },
         { r: 'baseball', index: 2 },
       ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setSportPosts(tempPost);
+      const posts = await getPosts(subreddit);
+      setSportPosts(posts);
     };
 
     const addWorldPosts = async () => {
@@ -35,12 +122,8 @@ const Main = () => {
         { r: 'worldnews', index: 1 },
         { r: 'worldevents', index: 0 },
       ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setWorldPosts(tempPost);
+      const posts = await getPosts(subreddit);
+      setWorldPosts(posts);
     };
 
     const addLocalPosts = async () => {
@@ -49,12 +132,8 @@ const Main = () => {
         { r: 'ontario', index: 1 },
         { r: 'toronto', index: 2 },
       ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setLocalPosts(tempPost);
+      const posts = await getPosts(subreddit);
+      setLocalPosts(posts);
     };
 
     const addEnterPosts = async () => {
@@ -63,12 +142,8 @@ const Main = () => {
         { r: 'movies', index: 1 },
         { r: 'celebrities', index: 0 },
       ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setEnterPosts(tempPost);
+      const posts = await getPosts(subreddit);
+      setEnterPosts(posts);
     };
 
     const addPoliticPosts = async () => {
@@ -77,39 +152,23 @@ const Main = () => {
         { r: 'neutralpolitics', index: 1 },
         { r: 'canadianpolitics', index: 0 },
       ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setPoliticPosts(tempPost);
+      const posts = await getPosts(subreddit);
+      setPoliticPosts(posts);
     };
 
     const addRealPosts = async () => {
       const subreddit = [
-        { r: 'canadahousing', index: 2 },
-        { r: 'torontorealestate', index: 1 },
+        { r: 'canadahousing', index: 2, end: 5 },
+        { r: 'torontorealestate', index: 1, end: 4 },
       ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setRealPosts(tempPost);
+      const posts = await getPosts(subreddit);
+      setRealPosts(posts);
     };
 
     const addPopularPosts = async () => {
-      const subreddit = [
-        { r: 'popular', index: 0 },
-        { r: 'popular', index: 2 },
-        { r: 'popular', index: 4 },
-      ];
-      const tempPost: PostInter[] = [];
-      for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
-        tempPost.push(...result);
-      }
-      setPopularPosts(tempPost);
+      const subreddit = [{ r: 'popular', index: 0, end: 5 }];
+      const posts = await getPosts(subreddit);
+      setPopularPosts(posts);
     };
 
     addSportPosts();
@@ -119,6 +178,7 @@ const Main = () => {
     addPoliticPosts();
     addRealPosts();
     addPopularPosts();
+    // addPosts(categories);
   }, []);
   return (
     <div className="Main h-100 border-box">
