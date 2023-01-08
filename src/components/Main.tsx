@@ -168,6 +168,7 @@ const Main = () => {
     const addPopularPosts = async () => {
       const subreddit = [{ r: 'popular', index: 0, end: 5 }];
       const posts = await getPosts(subreddit);
+      console.log(posts);
       setPopularPosts(posts);
     };
 

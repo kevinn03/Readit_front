@@ -27,10 +27,16 @@ const Header = () => {
 
   const [date, setDate] = useState(new Date());
 
-  useEffect(() => {
+  function refreshClock() {
     setDate(new Date());
-    return;
-  });
+  }
+  useEffect(() => {
+    const timerId = setInterval(refreshClock, 1000);
+    return function cleanup() {
+      clearInterval(timerId);
+    };
+  }, []);
+
   return (
     <div className="dis-flex Header" id="home">
       <div className="header-left">
