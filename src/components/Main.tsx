@@ -112,6 +112,8 @@ const Main = () => {
         { r: 'sports', index: 0, end: 2 },
         { r: 'baseball', index: 2, end: 4 },
         { r: 'nhl', index: 2, end: 4 },
+        { r: 'boxing', index: 2, end: 4 },
+        { r: 'mma', index: 2, end: 4 },
       ];
       const posts = await getPosts(subreddit);
       setSportPosts(posts);
