@@ -107,10 +107,10 @@ const Main = () => {
 
     const addSportPosts = async () => {
       const subreddit = [
-        { r: 'nba', index: 2 },
-        { r: 'nfl', index: 2 },
-        { r: 'sports', index: 0 },
-        { r: 'baseball', index: 2 },
+        { r: 'nba', index: 2, end: 4 },
+        { r: 'nfl', index: 2, end: 4 },
+        { r: 'sports', index: 0, end: 2 },
+        { r: 'baseball', index: 2, end: 4 },
       ];
       const posts = await getPosts(subreddit);
       setSportPosts(posts);
@@ -118,9 +118,9 @@ const Main = () => {
 
     const addWorldPosts = async () => {
       const subreddit = [
-        { r: 'news', index: 0 },
-        { r: 'worldnews', index: 1 },
-        { r: 'worldevents', index: 0 },
+        { r: 'news', index: 0, end: 2 },
+        { r: 'worldnews', index: 1, end: 3 },
+        { r: 'worldevents', index: 0, end: 2 },
       ];
       const posts = await getPosts(subreddit);
       setWorldPosts(posts);
@@ -128,9 +128,9 @@ const Main = () => {
 
     const addLocalPosts = async () => {
       const subreddit = [
-        { r: 'canadanews', index: 0 },
-        { r: 'ontario', index: 1 },
-        { r: 'toronto', index: 2 },
+        { r: 'canadanews', index: 0, end: 2 },
+        { r: 'ontario', index: 1, end: 3 },
+        { r: 'toronto', index: 2, end: 4 },
       ];
       const posts = await getPosts(subreddit);
       setLocalPosts(posts);
@@ -138,9 +138,9 @@ const Main = () => {
 
     const addEnterPosts = async () => {
       const subreddit = [
-        { r: 'entertainment', index: 0 },
-        { r: 'movies', index: 1 },
-        { r: 'celebrities', index: 0 },
+        { r: 'entertainment', index: 0, end: 2 },
+        { r: 'movies', index: 1, end: 3 },
+        { r: 'celebrities', index: 0, end: 2 },
       ];
       const posts = await getPosts(subreddit);
       setEnterPosts(posts);
@@ -148,9 +148,9 @@ const Main = () => {
 
     const addPoliticPosts = async () => {
       const subreddit = [
-        { r: 'politics', index: 1 },
-        { r: 'neutralpolitics', index: 1 },
-        { r: 'canadianpolitics', index: 0 },
+        { r: 'politics', index: 1, end: 3 },
+        { r: 'neutralpolitics', index: 1, end: 3 },
+        { r: 'canadianpolitics', index: 0, end: 2 },
       ];
       const posts = await getPosts(subreddit);
       setPoliticPosts(posts);
