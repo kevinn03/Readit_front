@@ -201,7 +201,6 @@ const Main = () => {
         title={'Entertainment'}
         posts={enterPosts}
       ></Post>
-      {/* <Post title={'Technology'} posts={posts}></Post> */}
     </div>
   );
 };
