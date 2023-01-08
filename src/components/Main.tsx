@@ -14,6 +14,47 @@ const Main = () => {
   const [popularPosts, setPopularPosts] = useState<PostInter[]>([]);
 
   useEffect(() => {
+    //need to refactor add posts functions
+
+    const categories = {
+      sports: [
+        { r: 'nba', index: 2 },
+        { r: 'nfl', index: 2 },
+        { r: 'sports', index: 0 },
+        { r: 'baseball', index: 2 },
+      ],
+
+      world: [
+        { r: 'news', index: 0 },
+        { r: 'worldnews', index: 1 },
+        { r: 'worldevents', index: 0 },
+      ],
+
+      local: [
+        { r: 'canadanews', index: 0 },
+        { r: 'ontario', index: 1 },
+        { r: 'toronto', index: 2 },
+      ],
+
+      entertainment: [
+        { r: 'entertainment', index: 0 },
+        { r: 'movies', index: 1 },
+        { r: 'celebrities', index: 0 },
+      ],
+
+      politcal: [
+        { r: 'politics', index: 1 },
+        { r: 'neutralpolitics', index: 1 },
+        { r: 'canadianpolitics', index: 0 },
+      ],
+      realEstate: [
+        { r: 'canadahousing', index: 2, end: 5 },
+        { r: 'torontorealestate', index: 1, end: 4 },
+      ],
+
+      popular: [{ r: 'popular', index: 0, end: 6 }],
+    };
+
     const addSportPosts = async () => {
       const subreddit = [
         { r: 'nba', index: 2 },
@@ -87,26 +128,22 @@ const Main = () => {
 
     const addRealPosts = async () => {
       const subreddit = [
-        { r: 'canadahousing', index: 2 },
-        { r: 'torontorealestate', index: 1 },
+        { r: 'canadahousing', index: 2, end: 5 },
+        { r: 'torontorealestate', index: 1, end: 4 },
       ];
       const tempPost: PostInter[] = [];
       for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
+        const result = await redditAPI.getPosts(sub.r, sub.index, sub.end);
         tempPost.push(...result);
       }
       setRealPosts(tempPost);
     };
 
     const addPopularPosts = async () => {
-      const subreddit = [
-        { r: 'popular', index: 0 },
-        { r: 'popular', index: 2 },
-        { r: 'popular', index: 4 },
-      ];
+      const subreddit = [{ r: 'popular', index: 0, end: 5 }];
       const tempPost: PostInter[] = [];
       for (const sub of subreddit) {
-        const result = await redditAPI.getPosts(sub.r, sub.index);
+        const result = await redditAPI.getPosts(sub.r, sub.index, sub.end);
         tempPost.push(...result);
       }
       setPopularPosts(tempPost);
