@@ -111,6 +111,7 @@ const Main = () => {
         { r: 'nfl', index: 2, end: 4 },
         { r: 'sports', index: 0, end: 2 },
         { r: 'baseball', index: 2, end: 4 },
+        { r: 'nhl', index: 2, end: 4 },
       ];
       const posts = await getPosts(subreddit);
       setSportPosts(posts);
@@ -118,8 +119,8 @@ const Main = () => {
 
     const addWorldPosts = async () => {
       const subreddit = [
-        { r: 'news', index: 0, end: 2 },
-        { r: 'worldnews', index: 1, end: 3 },
+        { r: 'news', index: 0, end: 3 },
+        { r: 'worldnews', index: 1, end: 4 },
         { r: 'worldevents', index: 0, end: 2 },
       ];
       const posts = await getPosts(subreddit);
@@ -128,7 +129,7 @@ const Main = () => {
 
     const addLocalPosts = async () => {
       const subreddit = [
-        { r: 'canadanews', index: 0, end: 2 },
+        { r: 'canada', index: 0, end: 2 },
         { r: 'ontario', index: 1, end: 3 },
         { r: 'toronto', index: 2, end: 4 },
       ];
