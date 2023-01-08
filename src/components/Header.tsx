@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 const Header = () => {
   const DAYS = [
@@ -24,7 +24,13 @@ const Header = () => {
     'November',
     'December',
   ];
-  const date = new Date();
+
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    setDate(new Date());
+    return;
+  });
   return (
     <div className="dis-flex Header" id="home">
       <div className="header-left">
@@ -40,7 +46,7 @@ const Header = () => {
         </div>
         <div>
           {date.getHours()}:{date.getMinutes()}:
-          {date.getMilliseconds().toString().slice(0, 2)}
+          {date.getSeconds().toString().slice(0, 2)}
         </div>
       </div>
     </div>
