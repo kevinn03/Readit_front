@@ -14,7 +14,7 @@ const Post = ({ posts, title, idName }: IProps) => {
   return (
     <div className="post__container" id={idName}>
       <div className="post-title__container">
-        <span className="post-title">{title}</span>
+        <div className="post-title">{title}</div>
       </div>
       <div className="Post dis-flex">
         <PostLeft post={revPosts[0]}></PostLeft>
