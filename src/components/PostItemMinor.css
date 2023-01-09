@@ -24,6 +24,6 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
   .post-item-minor {
-    text-align: center;
+    text-align: left;
   }
 }

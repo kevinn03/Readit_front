@@ -11,7 +11,9 @@ const SubHeader = () => {
     <div className="subheader" id="header-box">
       <Navbar className="subheader-nav" bg="light" expand="md" variant="light">
         <Container className="nav-container" fluid>
-          <Navbar.Brand href="#home">Top</Navbar.Brand>
+          <Navbar.Brand className="top" href="#home">
+            Top
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
