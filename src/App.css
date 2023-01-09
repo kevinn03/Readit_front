@@ -10,7 +10,7 @@ html {
   padding: 0;
   margin: 1% auto;
   box-sizing: border-box;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Helvetica', 'Heebo', sans-serif;
   font-size: 1rem;
   /* font-weight: 800; */
   scroll-behavior: smooth;
@@ -72,30 +72,40 @@ html {
 
 @media only screen and (min-width: 600px) {
   .App {
-    width: 97%;
+    width: 100%;
   }
 
   .sticky-top {
-    width: 95%;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .App {
-    width: 95%;
+    width: 98%;
   }
 
   .sticky-top {
-    width: 93%;
+    width: 98%;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .App {
-    width: 80%;
+    width: 85%;
   }
 
   .sticky-top {
-    width: 78%;
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .App {
+    width: 70%;
+  }
+
+  .sticky-top {
+    width: 70%;
   }
 }

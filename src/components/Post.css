@@ -5,11 +5,11 @@
 }
 
 .post-title__container {
-  font-size: 150%;
+  font-size: 1.5rem;
   color: white;
   background-color: black;
   padding: 0.1% 0;
 }
 .post-title {
-  padding-left: 0.5%;
+  margin: 0 0.5rem;
 }
