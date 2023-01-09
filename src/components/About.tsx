@@ -11,8 +11,8 @@ const About = () => {
             crowded News{' '}
           </a>
         </span>
-        ReadIt News was created, to provide an alternative source to
-        tradiational Canadian news outlets, for Canadians.
+        ReadIt News was created, to provide an alternative source to traditional
+        Canadian news outlets.
       </p>
       <p>
         Reddit is a great source for news as it provides fairly uncensored
